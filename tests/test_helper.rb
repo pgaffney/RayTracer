@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby
 
-# test/test_helper.rb
+require "tuple"
+require "point"
+require "vector"
+require "color"
+require "projectile"
+require "environment"
+
 require 'minitest/autorun'
 require 'minitest/reporters'
 Minitest::Reporters.use!
@@ -13,5 +19,3 @@ if ENV["RUBYMINE_TESTUNIT_REPORTER"]
   $:.unshift(ENV["RUBYMINE_TESTUNIT_REPORTER"])
   $:.uniq!
 end
-
-#require 'test_help' # !!! test_helper script loads 'test/unit'

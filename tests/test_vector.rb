@@ -1,3 +1,5 @@
+require "./tests/test_helper.rb"
+
 class TestVector < MiniTest::Test
 
   def test_subtracting_two_vectors

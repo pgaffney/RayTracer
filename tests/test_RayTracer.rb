@@ -1,7 +1,7 @@
 require "./lib/RayTracer.rb"
-require "test/unit"
+require "./tests/test_helper.rb"
 
-class TestRayTracer < Test::Unit::TestCase
+class TestRayTracer < MiniTest::Test
 
   def test_sample
     assert_equal(4, 2+2)

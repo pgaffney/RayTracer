@@ -1,3 +1,5 @@
+require "./tests/test_helper.rb"
+
 class TestTuple < MiniTest::Test
 
   def setup

@@ -1,3 +1,5 @@
+require "./tests/test_helper.rb"
+
 class TestColor < MiniTest::Test
 
   def setup
