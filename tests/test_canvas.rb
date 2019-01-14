@@ -31,4 +31,11 @@ class CanvasTest < MiniTest::Test
     end
   end
 
+  def test_write_pixel_to_canvas
+    newCanvas = Canvas.new(10, 20)
+    @red = Color.new(1, 0, 0)
+    newCanvas.pixels[2][3] = @red
+    assert_equal(newCanvas.pixel(2,3), @red)
+  end
+
 end
