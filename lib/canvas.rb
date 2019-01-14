@@ -1,10 +1,11 @@
 class Canvas
 
-  attr_accessor :width, :height, :pixel, :pixels
+  attr_accessor :width, :height, :pixels
 
   def initialize(width, height)
     @width, @height = width, height
-    @pixels = Array.new(width){Array.new(height, Color.new(0, 0, 0))}
+    black = Color.new(0, 0, 0)
+    @pixels = Array.new(width){Array.new(height, black)}
   end
 
   def pixel(x, y)

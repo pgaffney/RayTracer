@@ -24,15 +24,10 @@ class CanvasTest < MiniTest::Test
   def test_all_pixels_are_black_in_new_canvas
     newCanvas = Canvas.new(10, 20)
     @black = Color.new(0, 0, 0)
-    w = 0
-    while w < newCanvas.width
-      h = 0
-      while h < newCanvas.height
-        puts "checking pixel #{w}, #{h}: #{newCanvas.pixel(w,h)}"
-        assert_equal(newCanvas.pixel(w,h),@black)
-        h += 1
+    newCanvas.pixels.each do |row|
+      row.each do |rowcol|
+        assert_equal(rowcol,@black)
       end
-      w += 1
     end
   end
 
