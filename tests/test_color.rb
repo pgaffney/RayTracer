@@ -1,6 +1,6 @@
 require "./tests/test_helper.rb"
 
-class TestColor < MiniTest::Test
+class ColorTest < MiniTest::Test
 
   def setup
     @c = Color.new(0.2, 0.3, 0.4)

@@ -1,6 +1,6 @@
 require "./tests/test_helper.rb"
 
-class TestVector < MiniTest::Test
+class VectorTest < MiniTest::Test
 
   def test_subtracting_two_vectors
     @v1 = Vector.new(3, 2, 1)

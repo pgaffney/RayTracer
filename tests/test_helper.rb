@@ -9,6 +9,7 @@ require "vector"
 require "color"
 require "projectile"
 require "environment"
+require "canvas"
 
 require 'minitest/autorun'
 require 'minitest/reporters'

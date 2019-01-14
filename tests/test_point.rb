@@ -1,6 +1,6 @@
 require "./tests/test_helper.rb"
 
-class TestPoint < MiniTest::Test
+class PointTest < MiniTest::Test
 
   def test_point_subtraction
     @p1 = Point.new(3, 2, 1)

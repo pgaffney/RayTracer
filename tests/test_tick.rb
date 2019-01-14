@@ -1,6 +1,6 @@
 require "./tests/test_helper.rb"
 
-class TestTick < MiniTest::Test
+class TickTest < MiniTest::Test
 
   def setup
     # projectile starts one unit above the origin.

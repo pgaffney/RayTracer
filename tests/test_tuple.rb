@@ -1,6 +1,6 @@
 require "./tests/test_helper.rb"
 
-class TestTuple < MiniTest::Test
+class TupleTest < MiniTest::Test
 
   def setup
     @a = Point.new(4.3, -4.2, 3.1)
