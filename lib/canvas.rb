@@ -12,4 +12,10 @@ class Canvas
     @pixels[x][y]
   end
 
+  def to_ppm
+    puts "P3"
+    puts "#{width} #{height}"
+    puts "255"
+  end
+
 end

@@ -38,4 +38,8 @@ class CanvasTest < MiniTest::Test
     assert_equal(newCanvas.pixel(2,3), @red)
   end
 
+  def test_canvas_to_ppm
+    newCanvas = Canvas.new(10, 20)
+    assert_output (/P3\n10 20\n255\n/) {newCanvas.to_ppm}
+  end
 end
