@@ -1,5 +1,7 @@
 POINT = 1.0
 VECTOR = 0.0
+MINCOLOR = 0
+MAXCOLOR = 255
 
 # floating point math insurance
 EPSILON = 0.0000001

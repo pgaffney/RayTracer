@@ -39,7 +39,13 @@ class CanvasTest < MiniTest::Test
   end
 
   def test_canvas_to_ppm
-    newCanvas = Canvas.new(10, 20)
-    assert_output (/P3\n10 20\n255\n/) {newCanvas.to_ppm}
+    newCanvas = Canvas.new(5, 3)
+    color1 = Color.new(1.5, 0, 0)
+    color2 = Color.new(0, 0.5, 0)
+    color3 = Color.new(-0.5, 0, 1)
+    newCanvas.pixels[0][0] = color1
+    newCanvas.pixels[1][2] = color2
+    newCanvas.pixels[2][4] = color3
+    assert_output (/P3\n5 3\n255\n255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 128 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 \n/) {newCanvas.to_ppm}
   end
 end
