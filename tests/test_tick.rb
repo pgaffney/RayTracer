@@ -37,7 +37,10 @@ class TickTest < MiniTest::Test
       canvas.pixels[canvas_y][canvas_x] = @red
       @projectile.tick(@environment)
     end
-
+    orig_std_out = STDOUT.clone
+    STDOUT.reopen(File.open('projectile.ppm', 'w+'))
+    canvas.to_ppm
+    STDOUT.reopen(orig_std_out)
   end
 
 end
