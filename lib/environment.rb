@@ -1,9 +1,8 @@
 class Environment
-  attr_accessor :g, :w
+  attr_accessor :gravity, :wind
 
   def initialize (gravity, wind)
-    @g = gravity
-    @w = wind
+    @gravity, @wind = gravity, wind
   end
 
 end

@@ -29,7 +29,6 @@ class Canvas
 
     pixels.each do |row|
       charcount = 0
-
       row.each do |rowcol|
         rowcol.to_a.each do |color|
           scaled_color = color * MAXCOLOR

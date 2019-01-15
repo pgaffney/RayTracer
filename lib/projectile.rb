@@ -1,20 +1,19 @@
 class Projectile
-  attr_accessor :p, :v
+  attr_accessor :position, :velocity
 
   def initialize (position, velocity)
-    @p = position
-    @v = velocity
+    @position, @velocity = position, velocity
   end
 
   def to_s
-    "(#{p}, #{v})"
+    "(#{position}, #{velocity})"
   end
 
-  def tick (env)
-    startp = self.p
-    startv = self.v
-    @p = startp + startv
-    @v = startv + env.g + env.w
+  def tick (environment)
+    start_position = self.position
+    start_velocity = self.velocity
+    @position = start_position + start_velocity
+    @velocity = start_velocity + environment.gravity + environment.wind
   end
 
 end
