@@ -31,8 +31,8 @@ class Canvas
       charcount = 0
 
       row.each do |rowcol|
-        for color in 0..2
-          scaled_color = rowcol.to_a[color] * MAXCOLOR
+        rowcol.to_a.each do |color|
+          scaled_color = color * MAXCOLOR
           scaled_color = MINCOLOR if scaled_color <= MINCOLOR
           scaled_color = MAXCOLOR if scaled_color >= MAXCOLOR
           if charcount + scaled_color.round.to_s.length < MAXPPMLINE # if we are still less than a line
