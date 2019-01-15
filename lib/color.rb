@@ -4,6 +4,8 @@ class Color < Tuple
   alias_method(:green, :y)
   alias_method(:blue,:z)
 
+  COLORS = 3
+
   def initialize(*args)
     super(*args)
     @w = 0
@@ -16,5 +18,8 @@ class Color < Tuple
     Color.new(newred, newgreen, newblue)
   end
 
+  def to_a
+    [red, green, blue]
+  end
 
 end

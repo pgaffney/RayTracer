@@ -38,7 +38,7 @@ class CanvasTest < MiniTest::Test
     assert_equal(newCanvas.pixel(2,3), @red)
   end
 
-  def test_canvas_to_ppm
+  def test_canvas_to_ppm_format
     newCanvas = Canvas.new(5, 3)
     color1 = Color.new(1.5, 0, 0)
     color2 = Color.new(0, 0.5, 0)
@@ -48,4 +48,16 @@ class CanvasTest < MiniTest::Test
     newCanvas.pixels[2][4] = color3
     assert_output (/P3\n5 3\n255\n255 0 0 0 0 0 0 0 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 128 0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 \n/) {newCanvas.to_ppm}
   end
+
+  def test_canvas_to_ppm_maxline
+    newCanvas = Canvas.new(10, 2)
+    color = Color.new(1, 0.8, 0.6)
+    newCanvas.pixels.each_with_index do |row, r|
+      row.each_with_index do |col, c|
+        newCanvas.pixels[r][c] = color
+      end
+    end
+    assert_output (/P3\n10 2\n255\n255 204 153 255 204 153 255 204 153 255 204 153 255 204 153 255 204 \n153 255 204 153 255 204 153 255 204 153 255 204 153 \n255 204 153 255 204 153 255 204 153 255 204 153 255 204 153 255 204 \n153 255 204 153 255 204 153 255 204 153 255 204 153 \n/) {newCanvas.to_ppm}
+  end
+
 end
