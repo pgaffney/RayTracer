@@ -8,8 +8,8 @@ class Canvas
     @pixels = Array.new(height){Array.new(width, black)}
   end
 
-  def pixel(row, column)
-    @pixels[row][column]
+  def pixel(column, row)
+    @pixels[column][row]
   end
 
   # create output in PPM format

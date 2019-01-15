@@ -10,8 +10,8 @@ class Projectile
   end
 
   def tick (environment)
-    start_position = self.position
-    start_velocity = self.velocity
+    start_position = position
+    start_velocity = velocity
     @position = start_position + start_velocity
     @velocity = start_velocity + environment.gravity + environment.wind
   end
