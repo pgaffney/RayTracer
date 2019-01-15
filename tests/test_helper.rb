@@ -10,6 +10,7 @@ require "color"
 require "projectile"
 require "environment"
 require "canvas"
+require "matrix"
 
 require 'minitest/autorun'
 require 'minitest/reporters'
